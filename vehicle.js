@@ -1,7 +1,7 @@
 // Daniel Shiffman
 // http://codingtra.in
-// Earthquake Data Viz
-// Video: https://www.youtube.com/watch?v=L1nHni9HMBw
+// Steering Behaviors Live Stream
+// Video: https://www.youtube.com/watch?v=L1nHni9HMBw#t=1h44m00s
 
 function Vehicle(x,y) {
   this.pos = createVector(random(width), random(height));
