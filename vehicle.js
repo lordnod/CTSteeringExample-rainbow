@@ -13,6 +13,7 @@ function Vehicle(x,y) {
   this.maxforce = 1;
 }
 
+
 Vehicle.prototype.behaviors = function() {
   var arrive = this.arrive(this.target);
   var mouse = createVector(mouseX, mouseY);
@@ -38,8 +39,20 @@ Vehicle.prototype.update = function() {
 }
 
 Vehicle.prototype.show = function() {
-   strokeWeight(8);
-   stroke(255);
+var vRed = [209, 0, 0];
+var vOrange = [255, 102, 34];
+var vYellow = [255, 218, 33];
+var vGreen = [51, 221, 0];
+var vBlue = [17, 51, 204];
+var vIndigo = [34, 0, 102];
+var vViolet = [51, 0, 68];
+
+var RoyGBiv = [vRed, vOrange, vYellow, vGreen, vBlue, vIndigo, vViolet];
+
+var vColor = random(RoyGBiv)
+
+  strokeWeight(8)
+   stroke(vColor[0], vColor[1], vColor[2]);
    point(this.pos.x, this.pos.y);   
 }
 
@@ -68,4 +81,4 @@ Vehicle.prototype.flee = function(target) {
     return steer;
  } else 
   return createVector(0,0);
- }
+}
